@@ -60,7 +60,7 @@ const handleMessage = async (conn, msg, sender, from, reply) => {
 *╰──────────●●►*
 ${categoryCommands.map(cmd => `➤ *${config.PREFIX}${cmd.pattern}*`).join('\n')}
 ━━━━━━━━━━━━━━━━━━
-*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*
+*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*
 `;
 
         await conn.sendMessage(from, {
@@ -109,7 +109,7 @@ ${categories.map((cat, index) => `┃ ${index + 1} ${cat.emoji} ${cat.title}`).j
 
 💬 Reply with a number to choose an option!  
 
-*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*
+*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*
 `;
 
         const sentMsg = await conn.sendMessage(from, { 
