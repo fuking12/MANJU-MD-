@@ -1,3 +1,4 @@
+//credit by MANJU-MD 
 const { readEnv } = require('../lib/database');
 const { cmd } = require('../command');
 
