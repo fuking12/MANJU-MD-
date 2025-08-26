@@ -80,7 +80,7 @@ cmd({
                     `1.1 *High Quality* 🎥\n` +
                     `1.2 *Low Quality* 📼\n` +
                     `1.3 *HLS Quality* 📽️\n\n` +
-                    `${config.FOOTER || "*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*"}`;
+                    `${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}`;
 
                 const downloadMsg = await conn.sendMessage(from, { image: { url: image }, caption: downloadInfo }, { quoted: mek });
                 const downloadMessageID = downloadMsg.key.id;
