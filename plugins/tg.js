@@ -55,7 +55,7 @@ cmd({
 │ 1.1 Download Stickers
 │
 ╰─────────────────╯
-${config.FOOTER || "*© POWERD BY QUEEN GIMI*"}
+${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}
 `;
 
         // Send info message
