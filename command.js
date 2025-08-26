@@ -1,3 +1,4 @@
+//Credit by MANJU-MD 
 var commands = [];
 
 function cmd(info, func) {
