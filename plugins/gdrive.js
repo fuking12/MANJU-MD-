@@ -27,7 +27,7 @@ cmd({
             `🖇 *Url:* ${q}\n\n` +
             `🔽 *Reply with your choice:*\n` +
             `1.1 *Document* 📁\n\n` +
-            `${config.FOOTER || "*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*"}`;
+            `${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}`;
 
         const sentMsg = await conn.sendMessage(from, { text: info }, { quoted: mek });
         const messageID = sentMsg.key.id;
