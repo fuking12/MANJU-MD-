@@ -122,7 +122,7 @@ cmd({
                           `   🖇 *URL:* ${series.link || "Unknown"}\n\n`;
         });
         seriesList += `🔽 *Reply with the number of the series you want to select (e.g., 1, 2, ...)*\n\n` +
-                      `${config.FOOTER || "*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*"}`;
+                      `${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}`;
 
         const sentMsg = await conn.sendMessage(from, { text: seriesList }, { quoted: mek });
         const messageID = sentMsg.key.id;
