@@ -61,7 +61,7 @@ cmd({
 │ 1.1 Download APK
 │
 ╰───────────────╯
-${config.FOOTER || "*© POWERD BY QUEEN GIMI*"}
+${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}
 `;
 
         // Send thumbnail with info
@@ -114,7 +114,7 @@ ${config.FOOTER || "*© POWERD BY QUEEN GIMI*"}
                         document: { url: dlData.result.downloadUrl },
                         mimetype: 'application/vnd.android.package-archive',
                         fileName: `${appInfo.title || "app"}.apk`.replace(/[^a-z0-9_.-]/gi, '_'),
-                        caption: config.FOOTER || "*© POWERD BY QUEEN GIMI*"
+                        caption: config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"
                     }, { quoted: mek });
                 } else {
                     return await conn.sendMessage(from, {
