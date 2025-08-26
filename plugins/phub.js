@@ -47,7 +47,7 @@ cmd({
                     `   🔗 ${video.url}\n`;
         });
 
-        info += `\n${config.FOOTER || "*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*"}`;
+        info += `\n${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}`;
 
         // Send search results with thumbnail
         let sentMsg;
