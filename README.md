@@ -35,5 +35,5 @@ This is a powerful, customizable WhatsApp bot designed for developers and media 
 ## 📧 Contact
 
 Owner: Pathum Rajapakshe
-contact: 94766863255 wp
+contact: 94766863255 
 Support: Join our community for help.
