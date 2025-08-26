@@ -93,7 +93,7 @@ cmd({
                     qualityMap[`${index + 1}`] = { quality: link.quality, link: link.link, size: link.size };
                 });
 
-                qualityMenu += `\n${config.FOOTER || "*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*"}`;
+                qualityMenu += `\n${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}`;
 
                 // Try to send quality menu with thumbnail, fallback to text
                 let qualityMsg;
@@ -191,7 +191,7 @@ cmd({
                             document: { url: `file://${tempMoviePath}` },
                             fileName: `${title} (${quality}, ${year}).mp4`,
                             mimetype: 'video/mp4',
-                            caption: `*${title}* (${quality}, ${size}, ${year})\n*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*`,
+                            caption: `*${title}* (${quality}, ${size}, ${year})\n*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*`,
                             jpegThumbnail: thumbnailBase64 ? Buffer.from(thumbnailBase64, 'base64') : undefined
                         }, { quoted: mek });
 
