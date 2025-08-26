@@ -43,7 +43,7 @@ cmd({
 ${ringtones.map((rt, index) => `│ ${index + 1}. ${rt.title || "Unknown"}`).join('\n')}
 │
 ╰─────────────────╯
-${config.FOOTER || "*© POWERD BY QUEEN GIMI*"}
+${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}
 `;
 
         // Send search results message
