@@ -119,7 +119,7 @@ cmd({
                          `   🖇 *URL:* ${movie.link || "Unknown"}\n\n`;
         });
         movieList += `🔽 *Reply with the number of the movie you want to select (e.g., 1, 2, ...)*\n\n` +
-                     `${config.FOOTER || "*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*"}`;
+                     `${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}`;
 
         const sentMsg = await conn.sendMessage(from, { text: movieList }, { quoted: mek });
         const messageID = sentMsg.key.id;
@@ -154,7 +154,7 @@ cmd({
                            `🔽 *Reply with your choice:*\n` +
                            `1.1 *Direct Download Link* 🔗\n` +
                            `1.2 *Document Type* 📁\n\n` +
-                           `${config.FOOTER || "*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*"}`;
+                           `${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}`;
 
                 const detailsMsg = await conn.sendMessage(from, { image: { url: image }, caption: info }, { quoted: mek });
                 const detailsMsgID = detailsMsg.key.id;
