@@ -16,10 +16,10 @@ async (conn, mek, m, { from, reply, sender }) => {
         }
 
         // Hardcoded vCard details
-        const ownerName = 'Keshara Liyanaarachchi';
-        const ownerOrg = 'QUEEN GIMI';
-        const ownerWaid = '94728866985';
-        const ownerPhone = '+94728866985';
+        const ownerName = 'ᴘᴀᴛʜᴜᴍ ʀᴀᴊᴀᴘᴀᴋsʜᴇ';
+        const ownerOrg = 'ᴍᴀɴᴊᴜ-ᴍᴅ';
+        const ownerWaid = '94766863255';
+        const ownerPhone = '+94781209709';
 
         // Define vCard
         const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
