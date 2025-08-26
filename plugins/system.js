@@ -31,7 +31,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 │ 🖥️ *Hostname*: ${hostname}
 │ 🧠 *CPU*: ${cpu}
 │ 🤖 *Bot Version*: ${botVersion}
-│ 👑 *Owner*: Keshara Liyanaarachchi
+│ 👑 *Owner*: ᴘᴀᴛʜᴜᴍ ʀᴀᴊᴀᴘᴀᴋsʜᴇ
 │
 ╰────────────────╯
 `;
