@@ -33,7 +33,7 @@ cmd({
             info += `${index + 1}. ${result.title}\n`;
         });
 
-        info += `\n${config.FOOTER || "*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*"}`;
+        info += `\n${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}`;
 
         const sentMsg = await conn.sendMessage(from, { text: info }, { quoted: mek });
         const messageID = sentMsg.key.id;
