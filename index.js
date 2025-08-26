@@ -27,7 +27,7 @@ const { sms, downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
 
-const ownerNumber = ['94728866985']
+const ownerNumber = ['94766863255']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
