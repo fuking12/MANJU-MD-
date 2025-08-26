@@ -37,8 +37,8 @@ async (conn, mek, m, { from, pushname = 'User', reply, sender }) => {
 *│🧬 𝚂𝚃𝙰𝚃𝚄𝚂 -* Online  
 *│🪼 𝚁𝙰𝙼 𝚄𝚂𝙰𝙶𝙴 -* ${formatRAMUsage()}  
 *│⏰ 𝚁𝚄𝙽𝚃𝙸𝙼𝙴 -* ${formatRuntime()}  
-*│🤖 𝙱𝙾𝚃 𝙽𝙰𝙼𝙴 -* ${config.BOT_NAME || '𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸'}  
-*│👑 𝙾𝚆𝙽𝙴𝚁 -* ${config.OWNER_NAME || '𝙺𝙴𝚂𝙷𝙰𝚁𝙰 𝙻𝙸𝚈𝙰𝙽𝙰𝙰𝚁𝙲𝙷𝙲𝙷𝙸'}  
+*│🤖 𝙱𝙾𝚃 𝙽𝙰𝙼𝙴 -* ${config.BOT_NAME || 'ᴍᴀɴᴊᴜ-ᴍᴅ'}  
+*│👑 𝙾𝚆𝙽𝙴𝚁 -* ${config.OWNER_NAME || 'ᴘᴀᴛʜᴜᴍ ʀᴀᴊᴀᴘᴀᴋsʜᴇ'}  
 *╰──────────●●►*  
 ━━━━━━━━━━━━━━━━━━  
 🔰 *I'M ALIVE AND READY!* 🔰  
