@@ -35,7 +35,7 @@ cmd({
     songDetailsMessage += `*Choose Your Download Format:*\n\n`;
     songDetailsMessage += `1 || Audio File 🎶\n`;
     songDetailsMessage += `2 || Document File 📂\n\n`;
-    songDetailsMessage += `© *𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*`;
+    songDetailsMessage += `© *ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*`;
 
     // Send the video thumbnail with song details
     const sentMessage = await messageHandler.sendMessage(from, {
