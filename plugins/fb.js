@@ -29,7 +29,7 @@ cmd({
             `🔽 *Reply with your choice:*\n` +
             `1.1 *HD Video* 🎥\n` +
             `1.2 *SD Video* 📼\n\n` +
-            `${config.FOOTER || "*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*"}`;
+            `${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}`;
 
         const sentMsg = await conn.sendMessage(from, { image: { url: thumbnail }, caption: info }, { quoted: mek });
         const messageID = sentMsg.key.id;
