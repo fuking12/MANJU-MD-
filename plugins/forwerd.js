@@ -86,8 +86,8 @@ return await reply(`❌ *Please give me a jid and quote a message you want*\n\n*
 if(m.quoted && m.quoted.type === "stickerMessage"){
 let image = await m.quoted.download()
             let sticker = new Sticker(image, {
-                pack: "⦁ SAVIYA-MD ⦁",
-                author: "⦁ SAVIYA-X-MD ⦁",
+                pack: "⦁ ᴍᴀɴᴊᴜ-ᴍᴅ ⦁",
+                author: "⦁ ᴍᴀɴᴊᴜ-ᴍᴅ ⦁",
                 type: StickerTypes.FULL, //q.includes("--default" || '-d') ? StickerTypes.DEFAULT : q.includes("--crop" || '-cr') ? StickerTypes.CROPPED : q.includes("--circle" || '-ci') ? StickerTypes.CIRCLE : q.includes("--round" || '-r') ? StickerTypes.ROUNDED : StickerTypes.FULL,
                 categories: ["🤩", "🎉"],
                 id: "12345",
