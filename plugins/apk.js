@@ -48,7 +48,7 @@ cmd({
 │ 1.1 Download APK
 │
 ╰──────────────────╯
-${config.FOOTER || "*© POWERD BY QUEEN GIMI*"}
+${config.FOOTER || "*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*"}
 `;
 
         // Send thumbnail with info
