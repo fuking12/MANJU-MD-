@@ -39,7 +39,7 @@ async (conn, mek, m, { from, reply, isOwner }) => {
                    `1.4 *Set AUTO_STICKER* 🎨\n` +
                    `1.5 *Set AUTO_REPLY* 💬\n` +
                    `1.6 *Set CHATBOT* 🤖\n\n` +
-                   `*© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚀𝚄𝙴𝙴𝙽 𝙶𝙸𝙼𝙸*`;
+                   `*© ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴍᴀɴᴊᴜ-ᴍᴅ*`;
 
         const imageUrl = 'https://ik.imagekit.io/6ilngyaqa/1752148389745-1000386145_W78uElpLF2.jpg';
         const sentMsg = await conn.sendMessage(from, { image: { url: imageUrl }, caption: info }, { quoted: mek });
