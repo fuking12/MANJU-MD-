@@ -27,7 +27,7 @@ const { sms, downloadMediaMessage } = require('./lib/msg')
 const axios = require('axios')
 const { File } = require('megajs')
 
-const ownerNumber = ['94728866985']
+const ownerNumber = ['94766863255']
 
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/auth_info_baileys/creds.json')) {
@@ -46,14 +46,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 8000;
 
-//=============================================
-
-async function connectToWA() {
-    //===============connect mongodb=====================
-    const connectDB = require('./lib/mongodb')
-    connectDB();  
-    //====================================================       
-    const {readEnv} = require('./lib/database')  
+//==========================================
     const config = await readEnv();
     const prefix = config.PREFIX 
     //===================================================
