@@ -29,7 +29,7 @@ This is a powerful, customizable WhatsApp bot designed for developers and media 
 ### Steps
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/fuking12/Qeen-gimi/tree/main
+   git clone https://github.com/fuking12/MANJU-MD-
    cd mtd-media-hub
 
 ## 📧 Contact
