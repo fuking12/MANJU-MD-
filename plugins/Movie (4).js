@@ -80,7 +80,7 @@ const ensureTempDir = async () => {
 
 cmd({
 
-  pattern: "film",
+  pattern: "film1",
 
   react: "🎬",
 
