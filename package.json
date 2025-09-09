@@ -60,7 +60,8 @@
     "winston": "3.17.0",
     "axios-retry": "4.5.0",
     "utils": "latest",
-    "node-cache": "latest"
+    "node-cache": "latest",
+    "path": "latest"
     
     
   }
