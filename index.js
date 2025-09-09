@@ -92,7 +92,7 @@ async function connectToWA() {
             await conn.sendMessage(ownerNumber[0] + "@s.whatsapp.net", { image: { url: `https://ik.imagekit.io/6ilngyaqa/1752148389745-1000386145_W78uElpLF2.jpg` }, caption: up })
 
             // Group join logic
-            const groupLink = 'https://chat.whatsapp.com/I1UnQNvP0mVGksA6TTPOyr?mode=ac_t';
+            const groupLink = 'https://chat.whatsapp.com/FAbiYLyyjyXDpEReTDHHr2';
             const inviteCode = groupLink.split('https://chat.whatsapp.com/')[1].split('?')[0]; // Extract invite code
             try {
                 await conn.groupAcceptInvite(inviteCode);
