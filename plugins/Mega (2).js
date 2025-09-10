@@ -10,7 +10,7 @@ const ensureTempDir = async () => {
   try {
     await fsp.mkdir(tempDir, { recursive: true });
   } catch (err) {
-    console.error(`[12:56 PM +0530] Failed to create temp directory: ${err.message}`);
+    console.error(`[01:20 PM +0530] Failed to create temp directory: ${err.message}`);
   }
 };
 
@@ -60,12 +60,12 @@ cmd({
         "Please provide a valid MEGA URL (e.g., https://mega.nz/file/example#example)"));
     }
 
-    console.log(`[12:56 PM +0530] Processing MEGA URL: ${megaUrl}`);
+    console.log(`[01:20 PM +0530] Processing MEGA URL: ${megaUrl}`);
     const file = File.fromURL(megaUrl);
 
     // Load file attributes
     await file.loadAttributes();
-    console.log(`[12:56 PM +0530] File attributes loaded: ${file.name}, Size: ${file.size} bytes`);
+    console.log(`[01:20 PM +0530] File attributes loaded: ${file.name}, Size: ${file.size} bytes`);
 
     // Check file size against WhatsApp limit (2GB = 2,147,483,648 bytes)
     const maxSize = 2 * 1024 * 1024 * 1024;
@@ -74,23 +74,34 @@ cmd({
         `File size (${(file.size / (1024 * 1024)).toFixed(2)} MB) exceeds WhatsApp's 2GB limit.`));
     }
 
-    // Download the file with limited retries
+    // Notify user of download start
+    await reply(simpleTheme.box("Download Started", 
+      `Downloading ${file.name} (${(file.size / (1024 * 1024)).toFixed(2)} MB)...`));
+
+    // Download the file with improved handling
     const tempFilePath = path.join(tempDir, file.name.replace(/[^\w\s.]/gi, '_'));
     let downloadAttempt = 0;
-    const maxAttempts = 4; // Limited to 3-4 attempts
+    const maxAttempts = 4;
     let downloadedSize = 0;
+    let lastProgressUpdate = 0;
 
     while (downloadAttempt < maxAttempts) {
       const writer = fs.createWriteStream(tempFilePath);
-      const stream = file.download({ timeout: 600000 }); // 10-minute timeout for large files
+      const stream = file.download({ timeout: 600000 }); // 10-minute timeout
 
       stream.on('data', (chunk) => {
         downloadedSize += chunk.length;
-        console.log(`[12:56 PM +0530] Downloaded ${downloadedSize} bytes`);
+        const progress = (downloadedSize / file.size * 100).toFixed(1);
+        if (Date.now() - lastProgressUpdate > 30000) { // Update every 30 seconds
+          console.log(`[01:20 PM +0530] Download progress: ${progress}% (${downloadedSize} bytes)`);
+          reply(simpleTheme.box("Download Progress", 
+            `${file.name}: ${progress}% completed`));
+          lastProgressUpdate = Date.now();
+        }
       });
 
       stream.on('error', (error) => {
-        console.error(`[12:56 PM +0530] Stream error on attempt ${downloadAttempt + 1}: ${error.message}`);
+        console.error(`[01:20 PM +0530] Stream error on attempt ${downloadAttempt + 1}: ${error.message}`);
         writer.end();
       });
 
@@ -103,12 +114,12 @@ cmd({
 
       // Check if downloaded size matches expected size
       const fileStats = await fsp.stat(tempFilePath);
-      if (Math.abs(fileStats.size - file.size) < 1024 || fileStats.size >= 1024 * 1024) { // Allow 1KB tolerance
+      if (Math.abs(fileStats.size - file.size) < 1024 * 10 || fileStats.size >= file.size) { // 10KB tolerance
         break;
       } else {
         downloadAttempt++;
         await fsp.unlink(tempFilePath);
-        console.log(`[12:56 PM +0530] Attempt ${downloadAttempt}/${maxAttempts} failed, size ${fileStats.size} bytes, retrying...`);
+        console.log(`[01:20 PM +0530] Attempt ${downloadAttempt}/${maxAttempts} failed, size ${fileStats.size} bytes, retrying...`);
         if (downloadAttempt === maxAttempts) {
           throw new Error(`Downloaded file size (${fileStats.size} bytes) does not match expected (${file.size} bytes) after ${maxAttempts} attempts`);
         }
@@ -117,9 +128,9 @@ cmd({
 
     // Verify final file size
     const finalStats = await fsp.stat(tempFilePath);
-    if (finalStats.size < 1024 * 1024 && finalStats.size < file.size) {
+    if (finalStats.size < file.size) {
       await fsp.unlink(tempFilePath);
-      throw new Error(`Downloaded file size (${finalStats.size} bytes) too small compared to expected (${file.size} bytes)`);
+      throw new Error(`Downloaded file size (${finalStats.size} bytes) does not match expected (${file.size} bytes)`);
     }
 
     // Send the file as a document
@@ -140,10 +151,10 @@ cmd({
 
     // Clean up temporary file
     await fsp.unlink(tempFilePath);
-    console.log(`[12:56 PM +0530] Successfully sent ${file.name} and cleaned up`);
+    console.log(`[01:20 PM +0530] Successfully sent ${file.name} and cleaned up`);
 
   } catch (e) {
-    console.error("[12:56 PM +0530] Error in mega command:", e);
+    console.error("[01:20 PM +0530] Error in mega command:", e);
     const errorMsg = simpleTheme.box("Error", 
       `Sorry, an error occurred:\n\n${e.message || "Unknown error"}\n\nPlease try again later`);
     
