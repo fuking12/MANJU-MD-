@@ -206,9 +206,9 @@ cmd({
     }
 
     // Step 2: Format movie list
-    let filmList = `🎬 SinhalaSub Movie Results 🎬\n\n`;
-    filmList += `🔍 Search: ${q}\n\n`;
-    filmList += `📝 Reply with the number of the movie you want:\n\n`;
+    let filmList = `sᴜʙ.ʟᴋ ᴍᴏᴠɪᴇ ʀᴇsᴜʟᴛs.\n\n`;
+    filmList += `🔍sᴇᴀʀᴄʜ: ${q}\n\n`;
+    filmList += `⭕.ʀᴇᴘʟʏ ᴡɪᴛʜ ɴᴜᴍʙᴇʀ ᴏғ ᴛʜᴇ ᴍᴏᴠɪᴇ ʏᴏᴜ ᴡᴀɴᴛ:\n\n`;
 
     const films = searchData.slice(0, 10).map((film, index) => ({
       number: index + 1,
@@ -224,7 +224,7 @@ cmd({
       filmList += `${film.number}. ${film.title} (${film.year})\n`;
     });
 
-    filmList += `\n*Powered by Movie Hub*`;
+    filmList += `\n*ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴛᴄᴄ ᴛᴇᴀᴍ*`;
 
     // Step 3: Send movie list
     const sentMessage = await conn.sendMessage(from, {
@@ -287,11 +287,11 @@ cmd({
       }
 
       // Step 7: Display details card with high-quality thumbnail
-      let detailsCard = `🎥 *Movie Details* 🎬\n\n`;
-      detailsCard += `*Title*: ${details.title}\n`;
-      detailsCard += `*IMDb*: ${details.imdb}\n`;
-      detailsCard += `*Description*: ${details.description}\n`;
-      detailsCard += `\n🔗 *Movie URL*: ${details.movieUrl}\n`;
+      let detailsCard = `⚕️*ᴍᴏᴠɪᴇ ᴅᴇᴛᴀɪʟs* ♂\n\n`;
+      detailsCard += `*ᴛɪᴛʟᴇ*: ${details.title}\n`;
+      detailsCard += `*ɪᴍᴅʙ*: ${details.imdb}\n`;
+      detailsCard += `*ᴅᴇsᴄʀɪᴘᴛɪᴏɴ*: ${details.description}\n`;
+      detailsCard += `\n🔗 *ᴍᴏᴠɪᴇ ᴜʀʟ*: ${details.movieUrl}\n`;
 
       await conn.sendMessage(from, {
         image: { url: thumbnailUrl },
@@ -331,15 +331,15 @@ cmd({
         url: link.redirectLink
       }));
 
-      let downloadOptions = `📥 *Download Options for ${selectedFilm.title} (${selectedFilm.year})* 📥\n\n`;
-      downloadOptions += `🎬 *Available Quality Buttons*:\n\n`;
+      let downloadOptions = `📥 *ᴅᴏᴡɴʟᴏᴀᴅ ᴏᴘᴛɪᴏɴ ғᴏʀ ${selectedFilm.title} (${selectedFilm.year})* 📥\n\n`;
+      downloadOptions += `🎬 *ᴀᴠᴀɪʟʙʟᴇ ǫᴜᴀʟɪᴛʏ ʙᴜᴛᴛᴏɴs*:\n\n`;
 
       downloadLinks.forEach(link => {
         downloadOptions += `${link.number}. ${link.quality} (${link.size}) - Redirect: ${link.url}\n`;
       });
 
-      downloadOptions += `\nReply with the quality button number to download the movie.`;
-      downloadOptions += `\n*Powered by Movie Hub*`;
+      downloadOptions += `\nʀᴇᴘʟʏ ǫᴜʟʟɪᴛʏ ʙᴜᴛᴛᴏɴs. ᴀғᴛᴇʀ ᴍᴏᴠɪᴇ ᴅᴏᴡɴʟᴏᴀᴅᴇᴅ.`;
+      downloadOptions += `\n*ᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴛᴄᴄ ᴛᴇᴀᴍ.*`;
 
       const downloadButtonMessage = await conn.sendMessage(from, {
         image: { url: thumbnailUrl },
@@ -461,7 +461,7 @@ cmd({
             document: { url: tempFilePath },
             mimetype: "video/mp4",
             fileName: `${selectedFilm.title.replace(/[^\w\s]/gi, '')}_${selectedLink.quality.replace(/\s+/g, '_')}.mp4`,
-            caption: `🎬 ${selectedFilm.title} (${selectedFilm.year})\n\nQuality: ${selectedLink.quality}\nSize: ${selectedLink.size}\n\nEnjoy your movie!`,
+            caption: `🎬 ${selectedFilm.title} (${selectedFilm.year})\n\nǫᴜᴀʟɪᴛʏ: ${selectedLink.quality}\nsɪᴢᴇ: ${selectedLink.size}\n\nᴘᴏᴡᴇᴀʀᴅ ʙʏ ᴛᴄᴄ ᴛᴇᴀᴍ.`,
             ...simpleTheme.getForwardProps()
           }, { quoted: qualityMessage });
 
