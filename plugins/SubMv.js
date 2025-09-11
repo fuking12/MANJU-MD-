@@ -1,3 +1,6 @@
+// Full Body Creater= Pathum Rajapakshe
+// pixaldrain , mega download succusfully added 
+
 const { cmd } = require("../command");
 const axios = require('axios');
 const NodeCache = require('node-cache');
